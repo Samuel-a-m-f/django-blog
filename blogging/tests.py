@@ -67,3 +67,4 @@ class FrontEndTestCase(TestCase):
                 self.assertContains(resp, title)
             else:
                 self.assertEqual(resp.status_code, 404)
+                
