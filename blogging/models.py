@@ -25,3 +25,4 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
+
