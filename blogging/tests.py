@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Post, Category
-from datetime import datetime, timezone, timedelta, UTC
+from datetime import datetime, timezone, timedelta
 
 
 class PostTestCase(TestCase):
@@ -32,7 +32,7 @@ class FrontEndTestCase(TestCase):
     fixtures = ['blogging_test_fixture.json', ]
 
     def setUp(self):
-        self.now = datetime.now(UTC)
+        self.now = datetime.now(timezone.utc)
         self.timedelta = timedelta(15)
         author = User.objects.get(pk=1)
         for count in range(1, 11):
