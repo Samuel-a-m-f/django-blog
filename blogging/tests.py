@@ -21,7 +21,6 @@ class PostTestCase(TestCase):
 
 
 class CategoryTestCase(TestCase):
-
     def test_string_representation(self):
         expected = "A Category"
         c1 = Category(name=expected)
